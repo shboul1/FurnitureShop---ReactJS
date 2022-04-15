@@ -1,7 +1,7 @@
 import Slider from "react-slick";
 import productImage1 from "../../assets/images/product-03.jpg";
 import { Container } from "react-bootstrap";
-import ProductCard from "../ProductCard/index";
+import ProductCard from "./ProductCard/ProductCard";
 import "slick-carousel/slick/slick-theme.css";
 import "slick-carousel/slick/slick.css";
 import "./style.css";
@@ -46,7 +46,7 @@ export default function ProductsCarousel() {
       productImage: productImage1,
       productName: "Creative Office Chair",
       productType: "royal",
-      productRate: 5,
+      productRate: 3,
       productPrice: 99,
       isNew: true,
     },
@@ -55,7 +55,7 @@ export default function ProductsCarousel() {
       productImage: productImage1,
       productName: "Creative Office Chair",
       productType: "royal",
-      productRate: 5,
+      productRate: 4,
       productPrice: 99,
       isNew: true,
     },
@@ -82,7 +82,7 @@ export default function ProductsCarousel() {
       productImage: productImage1,
       productName: "Creative Office Chair",
       productType: "royal",
-      productRate: 5,
+      productRate: 2,
       productPrice: 99,
       isNew: false,
     },

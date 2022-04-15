@@ -4,7 +4,6 @@ import { BsHandbag } from "react-icons/bs";
 import { BiGitCompare } from "react-icons/bi";
 import { AiOutlineHeart, AiOutlineEye } from "react-icons/ai";
 import { Row } from "react-bootstrap";
-import "./style.css";
 export default function ProductCard({
   productImage,
   productName,

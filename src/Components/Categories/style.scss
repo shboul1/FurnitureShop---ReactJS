@@ -1,0 +1,31 @@
+.CategoryCard {
+    position: relative;
+    cursor: pointer;
+    overflow: hidden;
+    img {
+        width: 100%;
+        transition: 0.8s;
+
+    }
+    p{
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%, -50%);
+        margin: 0 !important;
+        color: #fff;
+        font-size: 25px;
+        transition: 0.8s;
+    }
+    &:last-child {
+        margin-top: 20px !important;
+    }
+    &:hover {
+        img {
+            transform: scale3d(1.1,1.1,1)
+        }
+        p {
+            color: #000;
+        }
+    }
+}

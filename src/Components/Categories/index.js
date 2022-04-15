@@ -1,6 +1,7 @@
 import React from "react";
-import CategoryCard from "../CategoryCard";
+import CategoryCard from "./CategoryCard";
 import { Container, Row, Col } from "react-bootstrap";
+import "./style.css";
 export default function Categories() {
   return (
     <Container fluid>

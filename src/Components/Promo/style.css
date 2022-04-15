@@ -1,16 +1,17 @@
-.CategoryCard {
+.PromoCard {
   position: relative;
+  text-align: center;
   cursor: pointer;
   overflow: hidden;
 }
 
-.CategoryCard img {
+.PromoCard img {
   width: 100%;
-  -webkit-transition: 0.8s;
-  transition: 0.8s;
+  -webkit-transition: 1.1s;
+  transition: 1.1s;
 }
 
-.CategoryCard p {
+.PromoCard p {
   position: absolute;
   left: 50%;
   top: 50%;
@@ -19,20 +20,21 @@
   margin: 0 !important;
   color: #fff;
   font-size: 25px;
+  width: 100%;
   -webkit-transition: 0.8s;
   transition: 0.8s;
 }
 
-.CategoryCard:last-child {
+.PromoCard:last-child {
   margin-top: 20px !important;
 }
 
-.CategoryCard:hover img {
+.PromoCard:hover img {
   -webkit-transform: scale3d(1.1, 1.1, 1);
           transform: scale3d(1.1, 1.1, 1);
 }
 
-.CategoryCard:hover p {
+.PromoCard:hover p {
   color: #000;
 }
 /*# sourceMappingURL=style.css.map */
