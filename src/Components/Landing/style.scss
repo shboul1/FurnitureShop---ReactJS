@@ -1,0 +1,36 @@
+@import '../../styleVariables/Variabels';
+.landing {
+    background: url('../../assets/images/slide-01.jpg');
+    height: 100vh;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    @include FlexCenter();
+    flex-direction: column;
+    .landingMainText {
+        @include FlexCenter();
+        color: #fff;
+        font-size: 80px;
+        text-align: center;
+        line-height: 1.2;
+    }
+    .landingPara {
+        color: #fff;
+        text-align: center;
+    }
+    .shopnow-btn {
+        text-transform: uppercase;
+        @include BrownButton(12px,30px);
+    }
+}
+@media (max-width:768px) {
+    .landing {
+        .landingMainText {
+            font-size: 42px;
+        }
+        .landingPara {
+            font-size: 15px;
+            margin-bottom: 50px;
+        } 
+    }
+}

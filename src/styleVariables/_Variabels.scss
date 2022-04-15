@@ -1,0 +1,30 @@
+$MainBrown:#B08D75;
+@mixin BrownButton($p-l-r, $p-t-b) {
+    padding: $p-l-r $p-t-b ;
+    background-color: $MainBrown;
+    color: #fff;
+    transition: 0.3s;
+    border-radius: 8px;
+    cursor: pointer;
+    &:hover {
+        background-color: #2c2c2c;
+    }
+}
+@mixin GridCol {
+    display: grid;
+    flex-direction: column;
+}
+@mixin FlexCol {
+    display: flex;
+    flex-direction: column;
+}
+@mixin FlexBetween {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+@mixin FlexCenter {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
