@@ -8,7 +8,14 @@
     padding: 15px 0px;
     height: 50px;
     z-index: 999;
-    @include FlexBetween();
+    .navContainer {
+        @include FlexBetween();
+        width: 100%;
+        padding: 0 15px;
+    }
+    &.Dark {
+        background-color: #b89d7e;
+    }
     .burger {
         display: none;
         color: #fff;
@@ -41,8 +48,12 @@
 
 @media (max-width:768px) {
     .navbar {
-        @include FlexCol();
         height: 200px;
+        background-color: transparent !important;
+        .navContainer {
+            // @include FlexBetween();
+            padding: 0 !important;
+        }
         .burger {
             display: block;
         }

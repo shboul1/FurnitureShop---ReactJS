@@ -1,0 +1,5 @@
+@import "../../styleVariables/Variabels";
+.spinner-container {
+    @include FlexCenter();
+    height: 100vh;
+}

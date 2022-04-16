@@ -1,7 +1,7 @@
 import Slider from "react-slick";
-import productImage1 from "../../assets/images/product-03.jpg";
 import { Container } from "react-bootstrap";
 import ProductCard from "./ProductCard/ProductCard";
+import { products } from "../../data/data";
 import "slick-carousel/slick/slick-theme.css";
 import "slick-carousel/slick/slick.css";
 import "./style.css";
@@ -40,77 +40,14 @@ export default function ProductsCarousel() {
       },
     ],
   };
-  const products = [
-    {
-      id: 0,
-      productImage: productImage1,
-      productName: "Creative Office Chair",
-      productType: "royal",
-      productRate: 3,
-      productPrice: 99,
-      isNew: true,
-    },
-    {
-      id: 0,
-      productImage: productImage1,
-      productName: "Creative Office Chair",
-      productType: "royal",
-      productRate: 4,
-      productPrice: 99,
-      isNew: true,
-    },
-    {
-      id: 0,
-      productImage: productImage1,
-      productName: "Creative Office Chair",
-      productType: "royal",
-      productRate: 5,
-      productPrice: 99,
-      isNew: false,
-    },
-    {
-      id: 0,
-      productImage: productImage1,
-      productName: "Creative Office Chair",
-      productType: "royal",
-      productRate: 5,
-      productPrice: 99,
-      isNew: false,
-    },
-    {
-      id: 0,
-      productImage: productImage1,
-      productName: "Creative Office Chair",
-      productType: "royal",
-      productRate: 2,
-      productPrice: 99,
-      isNew: false,
-    },
-    {
-      id: 0,
-      productImage: productImage1,
-      productName: "Creative Office Chair",
-      productType: "royal",
-      productRate: 5,
-      productPrice: 99,
-      isNew: true,
-    },
-    {
-      id: 0,
-      productImage: productImage1,
-      productName: "Creative Office Chair",
-      productType: "royal",
-      productRate: 5,
-      productPrice: 99,
-      isNew: true,
-    },
-  ];
+
   return (
     <Container>
       <Slider {...settings}>
         {products.map((product, idx) => (
           <div key={idx}>
             <ProductCard
+              productId={product.id}
               productImage={product.productImage}
               productName={product.productName}
               productType={product.productType}

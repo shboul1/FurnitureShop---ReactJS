@@ -7,6 +7,9 @@
   padding: 15px 0px;
   height: 50px;
   z-index: 999;
+}
+
+.navbar .navContainer {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -16,6 +19,12 @@
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  width: 100%;
+  padding: 0 15px;
+}
+
+.navbar.Dark {
+  background-color: #b89d7e;
 }
 
 .navbar .burger {
@@ -56,14 +65,11 @@
 
 @media (max-width: 768px) {
   .navbar {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
     height: 200px;
+    background-color: transparent !important;
+  }
+  .navbar .navContainer {
+    padding: 0 !important;
   }
   .navbar .burger {
     display: block;

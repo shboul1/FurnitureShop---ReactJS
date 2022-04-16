@@ -3,8 +3,10 @@ import { IoStarSharp } from "react-icons/io5";
 import { BsHandbag } from "react-icons/bs";
 import { BiGitCompare } from "react-icons/bi";
 import { AiOutlineHeart, AiOutlineEye } from "react-icons/ai";
+import { useHistory } from "react-router-dom";
 import { Row } from "react-bootstrap";
 export default function ProductCard({
+  productId,
   productImage,
   productName,
   productType,
@@ -12,8 +14,12 @@ export default function ProductCard({
   productPrice,
   isNew,
 }) {
+  let history = useHistory();
   return (
-    <div className="product-card">
+    <div
+      className="product-card"
+      onClick={() => history.push(`/product/${productId}`)}
+    >
       {isNew && <div className="isNew">New</div>}
       <Row>
         <img src={productImage} alt="productImage" />

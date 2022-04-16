@@ -1,0 +1,80 @@
+@import "../../styleVariables/Variabels";
+.product-page {
+    background-color: #fff;
+    height: 100vh;
+    padding-top: 60px;
+    .productContainer {
+        margin-top: 40px;
+    }
+    img {
+        max-width: 100%;
+    }
+    .breadcrumb a, .breadcrumb li {
+        font-size: 13px;
+        color: inherit;
+    }
+    .sku, .availability{
+        color: #000;
+        font-weight: 100;
+        margin-bottom: 10px;
+    }
+    .price{
+        color:#2879FE;
+        font-weight: 600;
+        font-size: 24px;
+    }
+    .rate svg {
+        color: #FFB503;
+        font-size: 17px;
+        margin-bottom: 10px;
+    }
+    .desc {
+        font-size: 14px;
+        color: #777984;
+    }
+    .add-to-cart {
+        border: none;
+        background-color: #0D6EFD;
+        color: #fff;
+        text-transform: uppercase;
+        padding: 10px 5px;
+        border-radius: 8px;
+        width: 100%;
+        @include FlexCenter();
+        transition: 0.3s;
+        font-size: 20px;
+        &:hover {
+            background-color: #297dfa;
+        }
+        svg {
+            margin-right: 10px;
+            font-size: 20px;
+        }
+    }
+    .list-btn {
+        color: #0D6EFD;
+        font-size: 14px;
+        text-transform: uppercase;
+        margin-top: 50px;
+        display: flex;
+        span {
+            display: flex;
+            align-items: center;
+            cursor: pointer;
+            margin-right: 50px;
+            &:hover {
+                color: #297dfa;
+            }
+        }
+        svg {
+            margin-right: 10px;
+            font-size: 22px;
+        }
+    }
+    
+    .accordion-body {
+        font-size: 13px;
+        padding: 4px 1.25rem;
+        color: #777984;
+    }
+}
