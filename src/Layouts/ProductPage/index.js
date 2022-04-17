@@ -1,4 +1,3 @@
-import Navbar from "../Navbar";
 import {
   Container,
   Breadcrumb,
@@ -23,11 +22,10 @@ export default function ProductPage() {
   const selectedProduct = products.filter((product) => product.id == id)[0];
   const options = {
     zoomWidth: 500,
-    img: selectedProduct.productImage,
+    img: selectedProduct.image,
   };
   return (
     <div className="product-page">
-      <Navbar Light={false} />
       <Container>
         <Row>
           <Breadcrumb>
@@ -37,9 +35,7 @@ export default function ProductPage() {
             <Breadcrumb.Item href="https://getbootstrap.com/docs/4.0/components/breadcrumb/">
               Products
             </Breadcrumb.Item>
-            <Breadcrumb.Item active>
-              {selectedProduct.productName}
-            </Breadcrumb.Item>
+            <Breadcrumb.Item active>{selectedProduct.name}</Breadcrumb.Item>
           </Breadcrumb>
         </Row>
         <Row className="productContainer">
@@ -63,14 +59,12 @@ export default function ProductPage() {
             </Row>
             <Row>
               <div className="product-info">
-                <h3 className="name">{selectedProduct.productName}</h3>
-                <p className="price">${selectedProduct.productPrice}</p>
+                <h3 className="name">{selectedProduct.name}</h3>
+                <p className="price">${selectedProduct.price}</p>
                 <div className="rate">
-                  {new Array(selectedProduct.productRate)
-                    .fill("")
-                    .map((star, idx) => (
-                      <IoStarSharp key={idx} />
-                    ))}
+                  {new Array(selectedProduct.rate).fill("").map((star, idx) => (
+                    <IoStarSharp key={idx} />
+                  ))}
                 </div>
                 <p className="desc">{selectedProduct.description}</p>
               </div>

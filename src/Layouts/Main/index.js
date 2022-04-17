@@ -8,7 +8,6 @@ import Promo from "../../Components/Promo/Promo";
 export default function Main() {
   return (
     <>
-      <Navbar />
       <Landing />
       <Categories />
       <ProductsCarousel />

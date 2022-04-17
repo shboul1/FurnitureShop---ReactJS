@@ -46,15 +46,7 @@ export default function ProductsCarousel() {
       <Slider {...settings}>
         {products.map((product, idx) => (
           <div key={idx}>
-            <ProductCard
-              productId={product.id}
-              productImage={product.productImage}
-              productName={product.productName}
-              productType={product.productType}
-              productRate={product.productRate}
-              productPrice={product.productPrice}
-              isNew={product.isNew}
-            />
+            <ProductCard product={product} />
           </div>
         ))}
       </Slider>

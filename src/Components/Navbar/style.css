@@ -1,5 +1,5 @@
 .navbar {
-  background-color: transparent;
+  background-color: #8c715e;
   position: fixed;
   top: 0;
   left: 0;
@@ -23,10 +23,6 @@
   padding: 0 15px;
 }
 
-.navbar.Dark {
-  background-color: #b89d7e;
-}
-
 .navbar .burger {
   display: none;
   color: #fff;
@@ -47,7 +43,7 @@
 }
 
 .navbar .links a:hover {
-  color: #B08D75;
+  color: #212121;
 }
 
 .navbar svg {
@@ -60,7 +56,39 @@
 }
 
 .navbar svg:hover {
-  color: #B08D75;
+  -webkit-transform: scale(0.9);
+          transform: scale(0.9);
+}
+
+.navbar .options {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.navbar .options .cart {
+  position: relative;
+}
+
+.navbar .options .cart .cart-items-number {
+  position: absolute;
+  left: 20px;
+  top: 16px;
+  background-color: #b08d75;
+  border-radius: 50%;
+  width: 15px;
+  height: 15px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  color: #fff;
+  font-size: 11px;
 }
 
 @media (max-width: 768px) {
