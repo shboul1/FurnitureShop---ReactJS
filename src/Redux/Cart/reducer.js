@@ -1,4 +1,5 @@
 import * as CartConstants from "./constants";
+import { addItem } from "./utils";
 const cartReducer = (
   initState = {
     cartItems: [],
@@ -8,7 +9,7 @@ const cartReducer = (
   switch (action.type) {
     case CartConstants.ADD_ITEM:
       return {
-        cartItems: [...initState.cartItems, action.payload],
+        cartItems: addItem(initState.cartItems, action.payload),
       };
     case CartConstants.REMOVE_ITEM:
       return {

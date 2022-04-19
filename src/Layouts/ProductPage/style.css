@@ -12,25 +12,21 @@
   max-width: 100%;
 }
 
-.product-page .breadcrumb a, .product-page .breadcrumb li {
-  font-size: 13px;
-  color: inherit;
-}
-
-.product-page .sku, .product-page .availability {
+.product-page .sku,
+.product-page .availability {
   color: #000;
   font-weight: 100;
   margin-bottom: 10px;
 }
 
 .product-page .price {
-  color: #2879FE;
+  color: #2879fe;
   font-weight: 600;
   font-size: 24px;
 }
 
 .product-page .rate svg {
-  color: #FFB503;
+  color: #ffb503;
   font-size: 17px;
   margin-bottom: 10px;
 }
@@ -42,7 +38,7 @@
 
 .product-page .add-to-cart {
   border: none;
-  background-color: #0D6EFD;
+  background-color: #0d6efd;
   color: #fff;
   text-transform: uppercase;
   padding: 10px 5px;
@@ -72,7 +68,7 @@
 }
 
 .product-page .list-btn {
-  color: #0D6EFD;
+  color: #0d6efd;
   font-size: 14px;
   text-transform: uppercase;
   margin-top: 50px;

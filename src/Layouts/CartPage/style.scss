@@ -1,3 +1,4 @@
+@import "../../styleVariables/Variabels";
 .cart-page {
   .main-title {
     margin-bottom: 40px !important;
@@ -39,5 +40,25 @@
   }
   .clear-all {
     text-align: right !important;
+  }
+}
+
+.cart-page.empty {
+  margin-top: 60px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  height: calc(100vh - 200px);
+  button {
+    @include BrownButton(10px, 10px);
+    border: none;
+    margin-top: 20px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+  }
+  svg {
+    font-size: 300px;
+    opacity: 0.2;
   }
 }

@@ -2,6 +2,7 @@ import Slider from "react-slick";
 import { Container } from "react-bootstrap";
 import ProductCard from "./ProductCard/ProductCard";
 import { products } from "../../data/data";
+import { ToastContainer } from "react-toastify";
 import "slick-carousel/slick/slick-theme.css";
 import "slick-carousel/slick/slick.css";
 import "./style.css";
@@ -50,6 +51,9 @@ export default function ProductsCarousel() {
           </div>
         ))}
       </Slider>
+      <div>
+        <ToastContainer />
+      </div>
     </Container>
   );
 }

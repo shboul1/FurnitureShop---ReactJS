@@ -17,7 +17,7 @@
 }
 
 .product-card .isNew {
-  background-color: #03A9F5;
+  background-color: #03a9f5;
   position: absolute;
   left: 20px;
   top: 0;
@@ -28,7 +28,7 @@
 }
 
 .product-card .product-rate svg {
-  color: #FFB503;
+  color: #ffb503;
   font-size: 18px;
 }
 
@@ -91,16 +91,36 @@
           justify-content: space-between;
 }
 
-.product-card .product-options > svg {
+.product-card .product-options .opt {
+  padding: 10px;
+  background-color: #fff;
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   -webkit-transition: 0.3s;
   transition: 0.3s;
-  border-radius: 50%;
-  cursor: pointer;
-  display: block;
 }
 
-.product-card .product-options svg:hover {
+.product-card .product-options .opt svg {
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+}
+
+.product-card .product-options .opt:hover {
   background-color: #B08D75;
+}
+
+.product-card .product-options .opt:hover svg {
+  color: #fff;
 }
 
 .product-card:hover > .product-options {

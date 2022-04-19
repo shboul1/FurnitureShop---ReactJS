@@ -1,3 +1,4 @@
+import { useState } from "react";
 import {
   Container,
   Breadcrumb,
@@ -15,14 +16,29 @@ import { AiOutlineHeart } from "react-icons/ai";
 import { IoMdGitCompare } from "react-icons/io";
 import ReactImageZoom from "react-image-zoom";
 import promoBrands from "../../assets/images/tt-promo-brand-desktop.png";
+import CounterInput from "react-counter-input";
+import { notifySuccess } from "../../Components/ToastsNotifications";
+import { useDispatch } from "react-redux";
+import { ToastContainer } from "react-toastify";
 import "./style.css";
 export default function ProductPage() {
   const { id } = useParams();
-  const history = useHistory();
+  const dispatch = useDispatch();
   const selectedProduct = products.filter((product) => product.id == id)[0];
+  const [quantity, setQuantity] = useState(1);
+  const history = useHistory();
   const options = {
     zoomWidth: 500,
     img: selectedProduct.image,
+  };
+  const handleAddtoCart = () => {
+    for (let i = 0; i < quantity; i++) {
+      dispatch({
+        type: "ADD_ITEM",
+        payload: selectedProduct,
+      });
+    }
+    notifySuccess("Succesfully added to cart");
   };
   return (
     <div className="product-page">
@@ -32,7 +48,7 @@ export default function ProductPage() {
             <Breadcrumb.Item onClick={() => history.push("/")}>
               Home
             </Breadcrumb.Item>
-            <Breadcrumb.Item href="https://getbootstrap.com/docs/4.0/components/breadcrumb/">
+            <Breadcrumb.Item onClick={() => history.push("/products")}>
               Products
             </Breadcrumb.Item>
             <Breadcrumb.Item active>{selectedProduct.name}</Breadcrumb.Item>
@@ -70,9 +86,16 @@ export default function ProductPage() {
               </div>
             </Row>
             <Row className="align-items-center mt-3">
-              <Col lg={3}>1</Col>
+              <Col lg={3}>
+                <CounterInput
+                  count={1}
+                  min={1}
+                  max={10}
+                  onCountChange={() => setQuantity((prev) => prev + 1)}
+                />
+              </Col>
               <Col lg={9}>
-                <button className="add-to-cart">
+                <button className="add-to-cart" onClick={handleAddtoCart}>
                   <BiShoppingBag /> add to cart
                 </button>
               </Col>
@@ -100,6 +123,7 @@ export default function ProductPage() {
             </Row>
           </Col>
         </Row>
+        <ToastContainer />
       </Container>
     </div>
   );

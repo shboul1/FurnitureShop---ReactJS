@@ -1,7 +1,7 @@
 @import "../../styleVariables/Variabels";
-.navbar {
-  background-color: #8c715e;
+.navBar {
   position: fixed;
+  background-color: #8c715e;
   top: 0;
   left: 0;
   width: 100%;
@@ -18,18 +18,21 @@
     display: none;
     color: #fff;
   }
-  .brand-logo {
-    width: 100px;
+  .brand {
+    cursor: pointer;
+    .brand-logo {
+      width: 100px;
+    }
   }
   .links a {
     margin: 0 20px;
-    color: #fff;
+    color: #fff !important;
     font-size: 14px;
     text-transform: uppercase;
     transition: 0.3s;
     cursor: pointer;
     &:hover {
-      color: #212121;
+      color: #212121 !important;
     }
   }
   svg {
@@ -65,7 +68,7 @@
 }
 
 @media (max-width: 768px) {
-  .navbar {
+  .navBar {
     height: 200px;
     background-color: transparent !important;
     .navContainer {

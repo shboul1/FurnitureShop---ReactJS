@@ -1,6 +1,6 @@
-.navbar {
-  background-color: #8c715e;
+.navBar {
   position: fixed;
+  background-color: #8c715e;
   top: 0;
   left: 0;
   width: 100%;
@@ -9,7 +9,7 @@
   z-index: 999;
 }
 
-.navbar .navContainer {
+.navBar .navContainer {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -23,18 +23,22 @@
   padding: 0 15px;
 }
 
-.navbar .burger {
+.navBar .burger {
   display: none;
   color: #fff;
 }
 
-.navbar .brand-logo {
+.navBar .brand {
+  cursor: pointer;
+}
+
+.navBar .brand .brand-logo {
   width: 100px;
 }
 
-.navbar .links a {
+.navBar .links a {
   margin: 0 20px;
-  color: #fff;
+  color: #fff !important;
   font-size: 14px;
   text-transform: uppercase;
   -webkit-transition: 0.3s;
@@ -42,11 +46,11 @@
   cursor: pointer;
 }
 
-.navbar .links a:hover {
-  color: #212121;
+.navBar .links a:hover {
+  color: #212121 !important;
 }
 
-.navbar svg {
+.navBar svg {
   color: #fff;
   font-size: 20px;
   margin: 0 8px;
@@ -55,12 +59,12 @@
   transition: 0.3s;
 }
 
-.navbar svg:hover {
+.navBar svg:hover {
   -webkit-transform: scale(0.9);
           transform: scale(0.9);
 }
 
-.navbar .options {
+.navBar .options {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -69,11 +73,11 @@
           align-items: center;
 }
 
-.navbar .options .cart {
+.navBar .options .cart {
   position: relative;
 }
 
-.navbar .options .cart .cart-items-number {
+.navBar .options .cart .cart-items-number {
   position: absolute;
   left: 20px;
   top: 16px;
@@ -92,20 +96,20 @@
 }
 
 @media (max-width: 768px) {
-  .navbar {
+  .navBar {
     height: 200px;
     background-color: transparent !important;
   }
-  .navbar .navContainer {
+  .navBar .navContainer {
     padding: 0 !important;
   }
-  .navbar .burger {
+  .navBar .burger {
     display: block;
   }
-  .navbar.opened .links {
+  .navBar.opened .links {
     left: 0;
   }
-  .navbar .options {
+  .navBar .options {
     background-color: #fff;
     width: 100%;
     position: absolute;
@@ -121,10 +125,10 @@
         -ms-flex-align: center;
             align-items: center;
   }
-  .navbar .options > svg {
+  .navBar .options > svg {
     color: #B08D75;
   }
-  .navbar .links {
+  .navBar .links {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -141,14 +145,14 @@
     height: 100vh;
     width: 200px;
   }
-  .navbar .links a {
+  .navBar .links a {
     color: #000;
     margin: 12px 30px;
   }
-  .navbar .links a:first-child {
+  .navBar .links a:first-child {
     margin-top: 30px;
   }
-  .navbar .brand {
+  .navBar .brand {
     position: absolute;
     top: 69px;
     background-color: #B08D75;

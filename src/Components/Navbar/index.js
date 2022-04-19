@@ -17,9 +17,9 @@ function Navbar() {
     setIsNavOpen(!isNavOpen);
   };
   return (
-    <nav className={`navbar ${isNavOpen ? "opened" : ""}`}>
+    <nav className={`navBar ${isNavOpen ? "opened" : ""}`}>
       <div className="navContainer">
-        <div className="brand">
+        <div className="brand" onClick={() => history.push("/")}>
           <img src={Logo} alt="logo" className="brand-logo" />
         </div>
 
@@ -32,7 +32,7 @@ function Navbar() {
         <div className="options">
           <BsSearch />
 
-          <div className="cart">
+          <div className="cart" onClick={() => history.push("/cart")}>
             <RiShoppingBagLine />
             <div className="cart-items-number">{cartItems.length}</div>
           </div>

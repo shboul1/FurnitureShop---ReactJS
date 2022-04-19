@@ -1,21 +1,19 @@
-import React from "react";
+import React, { memo } from "react";
 import { IoStarSharp } from "react-icons/io5";
 import { BsHandbag } from "react-icons/bs";
 import { BiGitCompare } from "react-icons/bi";
 import { AiOutlineHeart, AiOutlineEye } from "react-icons/ai";
 import { useHistory } from "react-router-dom";
-import { Row } from "react-bootstrap";
+import { addItemToCart } from "../../../Redux/Cart/actions";
+import { Row, OverlayTrigger, Tooltip, Button } from "react-bootstrap";
 import { useDispatch } from "react-redux";
-import * as CartConstants from "../../../Redux/Cart/constants";
-export default function ProductCard({ product }) {
+function ProductCard({ product }) {
   let history = useHistory();
   const dispatch = useDispatch();
   const handleAddToCart = () => {
-    dispatch({
-      type: CartConstants.ADD_ITEM,
-      payload: product,
-    });
+    dispatch(addItemToCart(product));
   };
+
   return (
     <div className="product-card">
       {product.isNew && <div className="isNew">New</div>}
@@ -47,11 +45,43 @@ export default function ProductCard({ product }) {
           <BsHandbag /> add to cart
         </div>
       </Row>
+
       <div className="product-options">
-        <AiOutlineEye size={25} />
-        <AiOutlineHeart size={25} />
-        <BiGitCompare size={25} />
+        <OverlayTrigger
+          key={"left1"}
+          placement={"left"}
+          overlay={<Tooltip id={`tooltip-${"left"}`}>Quick Overview.</Tooltip>}
+        >
+          <div className="opt">
+            <AiOutlineEye size={20} />
+          </div>
+        </OverlayTrigger>
+
+        <OverlayTrigger
+          key={"left2"}
+          placement={"left"}
+          overlay={<Tooltip id={`tooltip-${"left"}`}>Add to Wishlist</Tooltip>}
+        >
+          <div className="opt">
+            <div className="opt">
+              <AiOutlineHeart size={20} />
+            </div>
+          </div>
+        </OverlayTrigger>
+
+        <OverlayTrigger
+          key={"left3"}
+          placement={"left"}
+          overlay={<Tooltip id={`tooltip-${"left"}`}>Add To Compare</Tooltip>}
+        >
+          <div className="opt">
+            <div className="opt">
+              <BiGitCompare size={20} />
+            </div>
+          </div>
+        </OverlayTrigger>
       </div>
     </div>
   );
 }
+export default memo(ProductCard);

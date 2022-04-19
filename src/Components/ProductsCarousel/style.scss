@@ -2,79 +2,89 @@
   margin: 70px 0;
   text-align: center;
 }
-  
+
 @import "../../styleVariables/Variabels";
 .product-card {
-    position: relative;
-    cursor: pointer;
-    .product-type {
+  position: relative;
+  //   background-color: rebeccapurple;
+  cursor: pointer;
+  .product-type {
     color: #c8c8c8;
     text-transform: uppercase;
     font-size: 12px;
     font-weight: 400;
     margin-top: 15px;
+  }
+  .isNew {
+    background-color: #03a9f5;
+    position: absolute;
+    left: 20px;
+    top: 0;
+    width: 40px;
+    font-size: 12px;
+    color: #fff;
+    font-weight: 500;
+  }
+  .product-rate {
+    svg {
+      color: #ffb503;
+      font-size: 18px;
     }
-    .isNew {
-        background-color: #03A9F5;
-        position: absolute;
-        left: 20px;
-        top: 0;
-        width: 40px;
-        font-size: 12px;
-        color: #fff;
-        font-weight: 500;
-
-    }
-    .product-rate  {
-        svg {
-            color: #FFB503;
-            font-size: 18px;
-        }
-    }
-    .product-name {
+  }
+  .product-name {
     font-size: 15px;
     margin-top: 5px;
     font-weight: 600;
+  }
+  .product-price {
+    font-size: 16px;
+    font-weight: 600;
+    margin-top: 2px;
+  }
+  .product-btn-add-to-card {
+    @include BrownButton(8px, 9px);
+    font-size: 16px;
+    text-transform: uppercase;
+    width: 50%;
+    font-weight: 400;
+    margin: 0 auto;
+    margin-top: 20px;
+    @include FlexCenter();
+    & > svg {
+      color: #fff;
+      margin-right: 10px;
     }
-    .product-price {
-        font-size: 16px;
-        font-weight: 600;
-        margin-top: 2px;
-    }
-    .product-btn-add-to-card {
-        @include BrownButton(8px,9px);
-        font-size: 16px;
-        text-transform: uppercase;
-        width: 50%;
-        font-weight: 400;
-        margin: 0 auto;
-        margin-top: 20px;
-        @include FlexCenter();
-        & > svg {
-            color: #fff;
-            margin-right: 10px;
+  }
+  .product-options {
+    display: none;
+    position: absolute;
+    right: 0;
+    top: 0;
+    transition: display 0.3s ease-in-out;
+    height: 50%;
+    justify-content: space-between;
+    .opt {
+      padding: 10px;
+      background-color: #fff;
+      border-radius: 50%;
+      width: 40px;
+      height: 40px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      transition: 0.3s;
+      svg {
+        transition: 0.3s;
+      }
+      &:hover {
+        background-color: $MainBrown;
+        svg {
+          color: #fff;
         }
+      }
     }
-    .product-options {
-        display: none;
-        position: absolute;
-        right: 0;
-        top: 0;
-        transition: display 0.3s ease-in-out;
-        height: 50%;
-        justify-content: space-between;
-        & > svg {
-            transition: 0.3s;
-            border-radius: 50%;
-            cursor: pointer;
-            display: block;
-        }
-        svg:hover {
-            background-color: $MainBrown;
-        
-        }
-    }
-    &:hover > .product-options {
-        @include FlexCol();
-    }
+  }
+  &:hover > .product-options {
+    @include FlexCol();
+  }
 }
