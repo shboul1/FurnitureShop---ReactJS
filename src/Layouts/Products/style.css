@@ -1,4 +1,65 @@
 .products {
   margin-top: 60px;
 }
+
+.Accordion-Header-producsPage button {
+  font-size: 18px !important;
+  margin-top: 15px !important;
+}
+
+.Accordion-Body-producsPage {
+  font-size: 14px !important;
+  padding: 10px 1.25rem !important;
+  opacity: 0.7 !important;
+}
+
+.Accordion-Body-producsPage.size-opt {
+  padding: 10px 10px !important;
+}
+
+.Accordion-Body-producsPage.color-opt {
+  padding: 10px 10px !important;
+}
+
+.sizes {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.sizes a {
+  background-color: #eeeeee;
+  padding: 5px 8px;
+  border-radius: 4px !important;
+  -webkit-transition: 0.2s ease-in-out;
+  transition: 0.2s ease-in-out;
+}
+
+.sizes a:hover {
+  background-color: #126af9;
+  color: #fff !important;
+}
+
+.colors {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  max-width: 70%;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+
+.colors .color-circle {
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  cursor: pointer;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+}
+
+.colors .color-circle:hover {
+  -webkit-transform: scale(0.9);
+          transform: scale(0.9);
+}
 /*# sourceMappingURL=style.css.map */

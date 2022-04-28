@@ -1,3 +1,46 @@
 .products {
   margin-top: 60px;
 }
+.Accordion-Header-producsPage button {
+  font-size: 18px !important;
+  margin-top: 15px !important;
+}
+.Accordion-Body-producsPage {
+  font-size: 14px !important;
+  padding: 10px 1.25rem !important;
+  opacity: 0.7 !important;
+  &.size-opt {
+    padding: 10px 10px !important;
+  }
+  &.color-opt {
+    padding: 10px 10px !important;
+  }
+}
+.sizes {
+  display: flex;
+  a {
+    background-color: #eeeeee;
+    padding: 5px 8px;
+    border-radius: 4px !important;
+    transition: 0.2s ease-in-out;
+    &:hover {
+      background-color: #126af9;
+      color: #fff !important;
+    }
+  }
+}
+.colors {
+  display: flex;
+  max-width: 70%;
+  flex-wrap: wrap;
+  .color-circle {
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    cursor: pointer;
+    transition: 0.3s;
+    &:hover {
+      transform: scale(0.9);
+    }
+  }
+}

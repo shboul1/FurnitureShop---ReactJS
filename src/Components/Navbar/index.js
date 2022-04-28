@@ -9,10 +9,15 @@ import { useHistory } from "react-router-dom";
 import { useSelector } from "react-redux";
 import { withRouter } from "react-router";
 import "./style.css";
+import CardDropdown from "../CartDropDown";
 function Navbar() {
   const { cartItems } = useSelector((state) => state.cartReducer);
   const [isNavOpen, setIsNavOpen] = useState(false);
+  const [cartDropDownVis, setCartDropDownVis] = useState(false);
   const history = useHistory();
+  const handleShowCartDropDown = () => {
+    setCartDropDownVis(!cartDropDownVis);
+  };
   const handleOpenNav = () => {
     setIsNavOpen(!isNavOpen);
   };
@@ -32,8 +37,9 @@ function Navbar() {
         <div className="options">
           <BsSearch />
 
-          <div className="cart" onClick={() => history.push("/cart")}>
-            <RiShoppingBagLine />
+          <div className="cart">
+            <RiShoppingBagLine onClick={handleShowCartDropDown} />
+            <CardDropdown cartDropDownVis={cartDropDownVis} />
             <div className="cart-items-number">{cartItems.length}</div>
           </div>
 

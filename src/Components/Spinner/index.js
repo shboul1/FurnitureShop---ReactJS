@@ -4,7 +4,7 @@ import "./style.css";
 export default function SpinnerComponent() {
   return (
     <div className="spinner-container">
-      <Spinner animation="grow" />
+      <Spinner animation="border" />
     </div>
   );
 }
